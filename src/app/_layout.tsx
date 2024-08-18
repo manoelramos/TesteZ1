@@ -15,7 +15,7 @@ import { useColorScheme } from "@/hooks/useColorScheme";
 SplashScreen.preventAutoHideAsync();
 
 export const unstable_settings = {
-  initialRouteName: "pokemon-list/index",
+  initialRouteName: "(pokemon-list)/index",
 };
 
 export default function RootLayout() {
@@ -36,8 +36,9 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="pokemon-list/index" />
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="(pokemon-list)" />
+        <Stack.Screen name="(pokemon-details)" />
       </Stack>
     </ThemeProvider>
   );
