@@ -10,7 +10,7 @@ const PokemonListScreen = () => {
   const router = useRouter();
 
   const renderFooter = useCallback(
-    () => (loading ? <Loading /> : null),
+    () => (loading ? <Loading testID="loading" /> : null),
     [loading],
   );
 
@@ -27,6 +27,7 @@ const PokemonListScreen = () => {
   return (
     <>
       <FlashList
+        testID="listOfPokemons"
         data={pokemonList}
         renderItem={({ item }) => (
           <PokemonItem item={item} onPressItem={onPressItem} />

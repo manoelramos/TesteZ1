@@ -4,7 +4,6 @@ type PokemonListResponse = PokemonService.ListResponse;
 type PokemonListParams = PokemonService.PokemonListParams;
 
 type PokemonDetailsParams = PokemonService.PokemonDetailsParams;
-type PokemonDetailsResponse = PokemonService.PokemonDetailsResponse;
 
 export const getAllPokemons = async ({
   offset,
