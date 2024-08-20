@@ -6,15 +6,10 @@ declare namespace PokemonDetailsStore {
   };
 
   type PokemonDetailsHandleResponse = {
-    abilities: {
-      name: string;
-    }[];
+    abilities: string;
     name: string;
-    types: {
-      name: string;
-    }[];
-    eggGroups: {
-      name: string;
-    }[];
+    types: string;
+    specie: string;
+    eggGroups: string;
   };
 }

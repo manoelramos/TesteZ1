@@ -19,15 +19,10 @@ export function handlePokemonDetailsResponse({
   specie: PokemonService.PokemonDetailsSpecieResponse;
 }): PokemonDetailsStore.PokemonDetailsHandleResponse {
   return {
-    abilities: details.abilities.map((item) => ({
-      name: item.ability.name,
-    })),
+    abilities: details.abilities.map((item) => item.ability.name).join(", "),
+    specie: details.species.name,
     name: details.name,
-    types: details.types.map((item) => ({
-      name: item.type.name,
-    })),
-    eggGroups: specie.egg_groups.map((item) => ({
-      name: item.name,
-    })),
+    types: details.types.map((item) => item.type.name).join(", "),
+    eggGroups: specie.egg_groups.map((item) => item.name).join(", "),
   };
 }

@@ -4,6 +4,8 @@ declare namespace PokemonStore {
     offset: number | null;
     loading: boolean;
     loadPokemonList: (offset: number) => Promise<void>;
+    capturedPokemons: string[];
+    capturePokemon: (pokemonName: string) => void;
   };
 
   type ListHandleResponse = {
