@@ -3,7 +3,7 @@ import {
   AxiosError,
   AxiosInstance,
   AxiosRequestConfig,
-} from "@/modules";
+} from '@/modules';
 
 type Response<T> = HttpClient.Response<T>;
 

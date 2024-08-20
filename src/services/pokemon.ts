@@ -1,4 +1,4 @@
-import { httpClientGet } from "@/clients";
+import { httpClientGet } from '@/clients';
 
 type PokemonListResponse = PokemonService.ListResponse;
 type PokemonListParams = PokemonService.PokemonListParams;
@@ -12,7 +12,7 @@ export const getAllPokemons = async ({
   try {
     const { data } = await httpClientGet<PokemonListResponse>({
       url: process.env.EXPO_PUBLIC_POKE_API_URL!,
-      path: "pokemon",
+      path: 'pokemon',
       params: {
         offset,
         limit,
@@ -31,7 +31,7 @@ export const getPokemonDetails = async <T>({
   try {
     const { data } = await httpClientGet<T>({
       url,
-      path: "",
+      path: '',
     });
 
     return data;

@@ -1,5 +1,5 @@
-import React from "react";
-import { IconArrow, Title, Wrapper } from "./styles";
+import React from 'react';
+import { IconArrow, Title, Wrapper } from './styles';
 
 type Props = {
   item: PokemonService.PokemonListItem;

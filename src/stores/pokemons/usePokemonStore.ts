@@ -1,8 +1,8 @@
-import { create, persist, devtools, createJSONStorage } from "@/modules";
-import { getAllPokemons } from "@/services";
-import { StorageConstants } from "@/storage/constants";
-import { zustandStorage } from "@/storage";
-import { handlePokemonListResponse } from "./handlers";
+import { create, persist, devtools, createJSONStorage } from '@/modules';
+import { getAllPokemons } from '@/services';
+import { StorageConstants } from '@/storage/constants';
+import { zustandStorage } from '@/storage';
+import { handlePokemonListResponse } from './handlers';
 
 export const usePokemonStore = create<PokemonStore.State>()(
   devtools(

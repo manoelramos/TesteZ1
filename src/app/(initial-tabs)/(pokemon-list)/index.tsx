@@ -1,9 +1,10 @@
-import React, { useCallback } from "react";
-import { useRouter } from "expo-router";
-import { FlashList } from "@/modules";
-import PokemonItem from "@/components/pokemon-item";
-import { usePokemons } from "@/hooks/services/usePokemons";
-import { Loading } from "./styles";
+import React, { useCallback } from 'react';
+import { useRouter } from 'expo-router';
+import { FlashList } from '@/modules';
+import PokemonItem from '@/components/pokemon-item';
+import NotFound from '@/components/not-found';
+import { usePokemons } from '@/hooks/services/usePokemons';
+import { Loading } from './styles';
 
 const PokemonListScreen = () => {
   const { pokemonList, fetchMorePokemons, loading } = usePokemons();
@@ -21,7 +22,7 @@ const PokemonListScreen = () => {
   );
 
   const onPressItem = (selectedItem: PokemonService.PokemonListItem) => {
-    router.push({ pathname: "/(pokemon-details)", params: selectedItem });
+    router.push({ pathname: '/(pokemon-details)', params: selectedItem });
   };
 
   return (
@@ -37,6 +38,7 @@ const PokemonListScreen = () => {
         ListFooterComponent={renderFooter}
         onEndReached={fetchMorePokemons}
         onEndReachedThreshold={0.1}
+        ListEmptyComponent={NotFound}
       />
     </>
   );

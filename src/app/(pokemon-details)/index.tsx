@@ -1,6 +1,6 @@
-import React, { useMemo } from "react";
-import { useLocalSearchParams, useRouter } from "expo-router";
-import { usePokemonDetails } from "@/hooks/services/usePokemonDetails";
+import React, { useMemo } from 'react';
+import { useLocalSearchParams, useRouter } from 'expo-router';
+import { usePokemonDetails } from '@/hooks/services/usePokemonDetails';
 import {
   BtCapture,
   Wrapper,
@@ -11,9 +11,9 @@ import {
   TitleWrapper,
   Loading,
   LoadingWrapper,
-} from "./styles";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { usePokemonStore } from "@/stores/pokemons/usePokemonStore";
+} from './styles';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { usePokemonStore } from '@/stores/pokemons/usePokemonStore';
 
 const PokemonDetailsScreen = () => {
   const insets = useSafeAreaInsets();
@@ -68,7 +68,7 @@ const PokemonDetailsScreen = () => {
       </InfoWrapper>
       <ButtonWrapper marginBottom={insets.bottom}>
         <BtCapture
-          text={pokemonCaptured ? "Capturado" : "Capturar"}
+          text={pokemonCaptured ? 'Capturado' : 'Capturar'}
           disabled={pokemonCaptured}
           onPressItem={onPressCapture}
         />

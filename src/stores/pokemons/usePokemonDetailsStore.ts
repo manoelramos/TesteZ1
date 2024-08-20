@@ -1,6 +1,6 @@
-import { create } from "@/modules";
-import { getPokemonDetails } from "@/services";
-import { handlePokemonDetailsResponse } from "./handlers";
+import { create } from '@/modules';
+import { getPokemonDetails } from '@/services';
+import { handlePokemonDetailsResponse } from './handlers';
 
 export const usePokemonDetailsStore = create<PokemonDetailsStore.State>(
   (set) => ({

@@ -1,7 +1,7 @@
-import { StateStorage, MMKV } from "@/modules";
+import { StateStorage, MMKV } from '@/modules';
 
 export const storage = new MMKV({
-  id: "pokemon-storage",
+  id: 'pokemon-storage',
 });
 
 export const zustandStorage: StateStorage = {

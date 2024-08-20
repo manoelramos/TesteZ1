@@ -1,6 +1,6 @@
-import React from "react";
-import { TouchableOpacityProps } from "react-native";
-import { Text, Wrapper } from "./styles";
+import React from 'react';
+import { TouchableOpacityProps } from 'react-native';
+import { Text, Wrapper } from './styles';
 
 type Props = {
   text: string;

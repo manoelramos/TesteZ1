@@ -1,9 +1,9 @@
-import Button from "@/components/button";
-import Typography from "@/components/typography";
-import { styled } from "@/modules";
+import Button from '@/components/button';
+import Typography from '@/components/typography';
+import { styled } from '@/modules';
 
 export const Loading = styled.ActivityIndicator.attrs({
-  size: "small",
+  size: 'small',
 })``;
 
 export const LoadingWrapper = styled.View`

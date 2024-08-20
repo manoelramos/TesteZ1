@@ -1,5 +1,6 @@
-import { useEffect } from "react";
-import { usePokemonDetailsStore } from "@/stores/pokemons/usePokemonDetailsStore";
+import { useEffect } from 'react';
+import { usePokemonDetailsStore } from '@/stores/pokemons/usePokemonDetailsStore';
+import { Alert } from 'react-native';
 
 export function usePokemonDetails({
   url,
@@ -10,8 +11,12 @@ export function usePokemonDetails({
     fetchPokemons();
   }, []);
 
-  function fetchPokemons() {
-    loadPokemonDetails(url);
+  async function fetchPokemons() {
+    try {
+      await loadPokemonDetails(url);
+    } catch (error) {
+      Alert.alert('Erro', 'Ocorreu um erro ao tentar fazer a requisição');
+    }
   }
 
   return {

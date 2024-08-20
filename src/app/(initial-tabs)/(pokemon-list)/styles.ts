@@ -1,5 +1,5 @@
-import { styled } from "@/modules";
+import { styled } from '@/modules';
 
 export const Loading = styled.ActivityIndicator.attrs({
-  size: "small",
+  size: 'small',
 })``;

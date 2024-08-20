@@ -2,7 +2,7 @@ import React from "react";
 import { render, fireEvent, waitFor } from "@testing-library/react-native";
 import { useRouter } from "expo-router";
 import { usePokemons } from "@/hooks/services/usePokemons";
-import PokemonListScreen from "../(pokemon-list)";
+import PokemonListScreen from "../(initial-tabs)/(pokemon-list)";
 
 jest.mock("expo-router", () => ({
   useRouter: jest.fn(),

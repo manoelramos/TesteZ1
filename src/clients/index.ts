@@ -5,4 +5,4 @@ export {
   patch as httpClientPatch,
   post as httpClientPost,
   put as httpClientPut,
-} from "./http";
+} from './http';

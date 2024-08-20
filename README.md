@@ -1,50 +1,55 @@
-# Welcome to your Expo app 👋
+# Teste Z1
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+O projeto tem como objetivo cumprir os requisitos do teste enviado via PDF.
 
-## Get started
+## Sobre as tecnologias
 
-1. Install dependencies
+1. Foi escolhido o expo para a criação do app, para estar alinhados com os requisitos da empresa;
+2. Foi utilizando o Zustand para controle de estado;
+3. Foi utilizado o MMKV para armazenamento, por ser um dos mais perfomatico;
+4. Foi utilizado o FlashList, por questões de perfomance.
+5. Foi utilizaod o axios para realizar as chamadas http.
 
-   ```bash
-   npm install
-   ```
+## Start do app
 
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+Para utilização do mmvk foi necessário utilizar o prebuild. Talvez seja necessário rodar o comando: npx expo prebuild.
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Para rodar android
 
-## Learn more
+```bash
+npx expo run:android
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+Para rodar iOS
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npx expo run:ios
+```
 
-## Join the community
+## Sobre a arquitetura:
 
-Join our community of developers creating universal apps.
+### src
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **@types**: Tipagem da aplicação, replicando a arquitetura do projeto.
+- **app**: Estão as telas do app, seguindo estrutura para o expo-router.
+- **assets**: Estão localizados os assets do projeto, imagens, fontes, animações.
+- **clients**: Estão localizados as instâncias de clientes, pode ser http, graphql e etc.
+- **components**: Todos os componentes genéricos da aplicação;
+- **hooks**: Hooks que serão criados e utilizados no projeto.
+  - **_services_**: Hooks que fazem a interface entre a camada de store e a view, nessa camada pode-se inserir as lógicas para chamada de fetchs, controle de loading e possíveis regras de negócios para evitar que as lógicas fiquem nas views.
+- **modules**: Concentra as libs utilizadas no projeto, com o objetivo de facilitar manutenções futuras, caso haja necessidade de trocar uma lib ou atualizar.
+- **services**: Camada de serviço da aplicação, nelas são inseridas as chamadas para as apis. Nessa camada não é aplicada nenhuma regra de negócio.
+- **storage**: Criação de instâncias de libs de armazenamentos;
+- **stores**: Criação das stores para controle de estado da aplicação. Nessa camada também estão as chamadas aos serviços. Cada pasta de store tem seu handlers, funções para auxiliar em qualquer de...para que seja necessário para passar a informação para o estado.
+- **utils**: Funções utilitárias para auxiliar na aplicação inteira.
+
+## Pontos de melhorias
+
+1. Aumento da cobertura de teste;
+2. Melhor tratativa de erros, criação de uma camada que intertrepe os erros de API, alinhados com o formato do backend, por exemplo;
+3. Utilização de tema na construção de components e telas;
+4. Utilizar biblioteca de internacionalização, para não deixar textos diretamente na View e sim a partir de um arquivo global;

@@ -1,5 +1,5 @@
-import { styled } from "@/modules";
-import Typography from "../typography";
+import { styled } from '@/modules';
+import Typography from '../typography';
 
 export const Wrapper = styled.TouchableOpacity`
   padding: 16px;

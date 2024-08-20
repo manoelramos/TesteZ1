@@ -1,4 +1,4 @@
-import { getOffsetFromUrl } from "@/utils";
+import { getOffsetFromUrl } from '@/utils';
 
 export function handlePokemonListResponse(
   data: PokemonService.ListResponse,
@@ -19,10 +19,10 @@ export function handlePokemonDetailsResponse({
   specie: PokemonService.PokemonDetailsSpecieResponse;
 }): PokemonDetailsStore.PokemonDetailsHandleResponse {
   return {
-    abilities: details.abilities.map((item) => item.ability.name).join(", "),
+    abilities: details.abilities.map((item) => item.ability.name).join(', '),
     specie: details.species.name,
     name: details.name,
-    types: details.types.map((item) => item.type.name).join(", "),
-    eggGroups: specie.egg_groups.map((item) => item.name).join(", "),
+    types: details.types.map((item) => item.type.name).join(', '),
+    eggGroups: specie.egg_groups.map((item) => item.name).join(', '),
   };
 }

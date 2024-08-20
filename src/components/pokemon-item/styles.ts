@@ -1,10 +1,10 @@
-import { FontAwesome } from "@expo/vector-icons";
-import { styled } from "@/modules";
-import Typography from "../typography";
+import { FontAwesome } from '@expo/vector-icons';
+import { styled } from '@/modules';
+import Typography from '../typography';
 
 export const Wrapper = styled.TouchableOpacity.attrs({
   style: {
-    shadowColor: "#000",
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 2,

@@ -1,5 +1,5 @@
-import React from "react";
-import { Text, TextProps, TextStyle } from "react-native";
+import React from 'react';
+import { Text, TextProps, TextStyle } from 'react-native';
 
 type Props = {
   children: React.ReactNode;
